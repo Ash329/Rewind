@@ -1,6 +1,14 @@
+# phase 1 -- visual
 torch
 transformers>=4.40,<5
 pillow
 numpy
 opencv-python
 faiss-cpu
+
+# phase 2 -- speech
+# faster-whisper rather than openai-whisper: several times quicker for the same
+# model, and it decodes audio through bundled ffmpeg libraries, so you do NOT
+# need an `ffmpeg` binary on PATH.
+faster-whisper>=1.0
+sentence-transformers>=3,<6
